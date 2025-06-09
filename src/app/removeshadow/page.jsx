@@ -4,7 +4,7 @@ import React, { useState,useEffect,useRef } from 'react'
 import { CldImage } from "next-cloudinary";
 import { generativeBackgroundReplace } from "@cloudinary/url-gen/actions/effect";
 import { NextResponse } from "next/server";
-function backgroundremoval() {
+function shadowremoval() {
     const [uploading,setisuploading]=useState(null)
     const [uploaded,setuploaded]= useState('');
       const [uploadedImage, setUploadedImage] = useState(null);
@@ -94,19 +94,28 @@ if (!response.ok) throw new Error("Failed to upload image");
                 <div className="flex justify-center">
                    
                   <CldImage
-                    width='1080'
-                    height='1080'
+  width="1335"
+  height="891"
                     src={uploadedImage}
-                    sizes="100vw"
-                    removeBackground
-                    alt="transformed image"
-                    crop="fill"
-                    gravity="auto"
-                    
-                    ref={imageRef}
-                   
-         
-                  />
+         sizes="100vw"
+  overlays={[{
+    text: {
+      color: 'white',
+      fontFamily: 'Source Sans Pro',
+      fontSize: 400,
+      fontWeight: 'black',
+      text: 'sgs'
+    },
+    effects: [
+      {
+        shear: '40:0',
+        opacity: 50
+      }
+    ]
+  }]}
+  alt=""
+  ref={imageRef}
+/>
                 </div>
               </div>
 
@@ -123,4 +132,4 @@ if (!response.ok) throw new Error("Failed to upload image");
   )
 }
 
-export default backgroundremoval
+export default shadowremoval
