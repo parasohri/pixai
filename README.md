@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+📸 Pix AI — AI-Based Image Background Remover
+Pix AI is a full-stack AI-powered web application that allows users to remove the background of images using Cloudinary's Generative AI APIs. Built using Next.js, Cloudinary, and Tailwind CSS, the app offers a smooth UI with download functionality and social media preview support.
 
-## Getting Started
+🚀 Features
+✅ Upload images directly from your device
 
-First, run the development server:
+🧠 Uses Cloudinary Generative AI for background removal
 
-```bash
+🔍 Real-time image preview after processing
+
+📥 Download processed image in one click
+
+🌐 Optimized for social media formats (coming soon)
+
+💬 Clean UI built with Tailwind CSS
+
+💻 Built using Next.js (App Router)
+
+🛠️ Tech Stack
+Technology	Purpose
+Next.js	React framework for frontend + API routes
+Cloudinary	AI-based image transformation & storage
+Tailwind CSS	Modern, utility-first styling
+React Hooks	State & side-effect management
+Cloudinary Upload Presets	Secure image upload configuration
+
+📷 Demo
+
+
+🔗 Live Demo: https://pixai.vercel.app
+📁 Source Code: GitHub Repo
+
+📂 Project Structure
+bash
+Copy
+Edit
+/pix-ai
+├── app/
+│   └── page.jsx       # Main UI Page
+├── pages/api/
+│   └── imageuploader.js  # API to upload image to Cloudinary
+├── public/
+├── styles/
+├── utils/
+├── .env.local
+└── README.md
+⚙️ Getting Started (Local)
+Clone the repository:
+
+bash
+Copy
+Edit
+git clone https://github.com/yourusername/pix-ai.git
+cd pix-ai
+Install dependencies:
+
+bash
+Copy
+Edit
+npm install
+Create .env.local:
+
+ini
+Copy
+Edit
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=your-cloud-name
+CLOUDINARY_API_KEY=your-api-key
+CLOUDINARY_API_SECRET=your-api-secret
+Start the app:
+
+bash
+Copy
+Edit
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🧠 AI Usage
+Pix AI uses the generativeBackgroundReplace() effect from Cloudinary's Generative AI toolkit to automatically detect and replace/remove backgrounds from uploaded images.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🙌 Acknowledgements
+Cloudinary Generative AI
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Next.js
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Tailwind CSS
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+📬 Contact
+Made with ❤️ by Paras Ohri
