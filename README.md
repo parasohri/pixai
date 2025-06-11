@@ -50,7 +50,7 @@ Clone the repository:
 bash
 Copy
 Edit
-git clone https://github.com/yourusername/pix-ai.git
+git clone https://github.com/parasohri/pix-ai.git
 cd pix-ai
 Install dependencies:
 
