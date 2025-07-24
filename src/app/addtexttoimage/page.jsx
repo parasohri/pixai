@@ -1,5 +1,5 @@
 'use client'
-import React, { useState,useEffect,useRef } from 'react'
+import React, { useState,useEffect,useRef, use } from 'react'
  
 import { CldImage } from "next-cloudinary";
 import { generativeBackgroundReplace } from "@cloudinary/url-gen/actions/effect";
@@ -7,6 +7,9 @@ import { NextResponse } from "next/server";
 function shadowremoval() {
     const [uploading,setisuploading]=useState(null)
     const [uploaded,setuploaded]= useState('');
+const [text,settext]=useState('');
+ const [fontSize, setFontSize] = useState(80);
+  const [fontColor, setFontColor] = useState('#ffffff');
       const [uploadedImage, setUploadedImage] = useState(null);
       const imageRef = useRef(null);
  useEffect(() => {
@@ -59,7 +62,7 @@ if (!response.ok) throw new Error("Failed to upload image");
   return (
      <div className="container mx-auto p-4 max-w-4xl">
       <h1 className="text-3xl font-bold mb-6 text-center">
-        Background removal 
+        Add Text to Image 
       </h1>
 
       <div className="card">
@@ -81,7 +84,24 @@ if (!response.ok) throw new Error("Failed to upload image");
               <progress className="progress progress-primary w-full"></progress>
             </div>
           )}
-
+          <input
+            type="text"
+            placeholder="Enter text to add"
+            className="input input-bordered w-full mt-4"
+            value={text}
+            onChange={(e) => settext(e.target.value)}
+          />
+<input type='text'
+placeholder='Enter font size'
+className='input input-bordered w-full mt-4'
+value={fontSize}
+onChange={(e) => setFontSize(e.target.value)} /> 
+                <input
+   type="color"
+                  className="input input-bordered w-full"
+                  value={fontColor}
+                  onChange={(e) => setFontColor(e.target.value)}
+                />
           {uploadedImage && (
             <div className="mt-6">
               <h2 className="card-title mb-4">Select Social Media Format</h2>
@@ -100,11 +120,11 @@ if (!response.ok) throw new Error("Failed to upload image");
          sizes="100vw"
   overlays={[{
     text: {
-      color: 'white',
+      color: fontColor || '#ffffff',
       fontFamily: 'Source Sans Pro',
-      fontSize: 400,
+      fontSize: fontSize || 80,
       fontWeight: 'black',
-      text: 'sgs'
+      text: text || 'Add your text here',
     },
     effects: [
       {
