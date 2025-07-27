@@ -22,13 +22,16 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@prisma/client": "^6.12.0",
     "@tailwindcss/postcss": "^4",
     "autoprefixer": "^10.4.21",
     "daisyui": "^5.0.28",
     "eslint": "^9",
     "eslint-config-next": "15.3.1",
+    "i": "^0.3.7",
+    "npm": "^11.5.1",
     "postcss": "^8.5.3",
-    "prisma": "^6.6.0",
+    "prisma": "^6.12.0",
     "tailwindcss": "^4.1.4",
     "tsx": "^4.19.3"
   }
