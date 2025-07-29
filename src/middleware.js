@@ -8,7 +8,7 @@ const publicRoutes = [
   "/signup",
 ];
 
-// Public dynamic route patterns (e.g., /portfolio/:id)
+ 
 const isPublicRoute = (req) => {
   const pathname = new URL(req.url).pathname;
 
