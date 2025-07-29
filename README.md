@@ -27,7 +27,7 @@ Cloudinary Upload Presets	Secure image upload configuration
 📷 Demo
 
 
-🔗 Live Demo: https://pixai.vercel.app
+🔗 Live Demo: https://pixai-yhsm.vercel.app/
 📁 Source Code: GitHub Repo
 
 📂 Project Structure
