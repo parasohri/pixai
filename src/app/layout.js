@@ -29,11 +29,11 @@ export const metadata = {
   ],
   authors: [{ name: "Paras Ohri" }],
   creator: "Paras Ohri",
-  metadataBase: new URL("https://your-deployed-url.vercel.app"),
+  metadataBase: new URL("https://pixai-yhsm.vercel.app/p"),
   openGraph: {
     title: "Cloudinary SaaS Toolkit",
     description: "A modern SaaS app for automated image and video processing.",
-    url: "https://your-deployed-url.vercel.app",
+    url: "https://pixai-yhsm.vercel.app/",
     siteName: "Cloudinary SaaS",
     images: [
       {
