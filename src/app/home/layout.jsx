@@ -148,7 +148,7 @@ export default function AppLayout({ children }) {
               Improve Blur
             </Link>
             <Link
-              href="/videoupload"
+              href="/videouploads"
               onClick={() => setSidebarOpen(false)}
               className="block py-2 px-3 text-gray-300 hover:bg-zinc-800 hover:text-blue-400 rounded-md transition-colors duration-200"
             >
