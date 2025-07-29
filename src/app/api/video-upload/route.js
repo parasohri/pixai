@@ -51,7 +51,7 @@ export async function POST(request) {
                         resource_type: "video",
                         folder: "video-uploads",
                         transformation: [
-                            {quality: "auto", fetch_format: "mp4"},
+                            {quality: "auto:low", fetch_format: "mp4"},
                         ]
                     },
                     (error, result) => {
@@ -62,11 +62,13 @@ export async function POST(request) {
                 uploadStream.end(buffer)
             }
         )
+        
+        
         const video = await prisma.video.create({
             data: {
                 title,
                 description,
-                publicId: result.result.public_id,
+                publicId: result.public_id,
                 originalSize: originalSize,
                 compressedSize: String(result.bytes),
                 duration: result.duration || 0,
